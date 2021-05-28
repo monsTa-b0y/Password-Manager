@@ -1,14 +1,16 @@
 import java.sql.*;
-import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 public class App extends JFrame implements ActionListener  {
-    private static final long serialVersionUID = 1L;
+    JFrame frame = new JFrame();
     JLabel l1,l2,l3,l4,l5;
     JTextField t1,t2,t3,t4;
     JButton b1,b2;
-    public App(){
-        setLayout(null);
+    App(){
+        frame.setSize(700,700);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(null);
         b1 = new JButton ("Insert");
         b2 = new JButton ("Clear");
         l4 = new JLabel ("Username");
@@ -29,7 +31,7 @@ public class App extends JFrame implements ActionListener  {
         t2.setBounds(300,160,150,40);
         t3.setBounds(300,220,150,40);
         t4.setBounds(300,280,150,40);
-        add(l1); add(l2);add(l3);add(t1);add(t2);add(t3);add(b1);add(b2);add(t4);add(l4);
+        frame.add(l1); frame.add(l2);frame.add(l3);frame.add(t1);frame.add(t2);frame.add(t3);frame.add(b1);frame.add(b2);frame.add(t4);frame.add(l4);
         b1.addActionListener(this);
         b2.addActionListener(this);
     }
@@ -60,13 +62,6 @@ public class App extends JFrame implements ActionListener  {
                 t4.setText(" ");
             }
         }catch(Exception e){}
-    }
-    public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        App a = new App();
-        a.setSize(700,700);
-        a.setVisible(true);
-        a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
     }
 
 }
