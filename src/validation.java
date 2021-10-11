@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.event.*;
 public class validation implements ActionListener{
-    private static String password = "leaveme@10ne";    
+    private static String password = "123";    
     JFrame frame = new JFrame();
     JPasswordField pass = new JPasswordField(50);
     JButton check = new JButton("Login");
@@ -20,7 +20,9 @@ public class validation implements ActionListener{
         check.setBounds(50,150,150,40);
         pass.setEchoChar('*');
         check.setFocusable(false);
+        exit.setFocusable(false);
         check.addActionListener(this);
+        exit.addActionListener(this);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -28,10 +30,10 @@ public class validation implements ActionListener{
             String pass1 = new String(pass.getPassword());
             if(pass1.equals(password)){
                 frame.dispose();
-                App a = new App();
+                menu m = new menu();
             }
             else{
-                JOptionPane.showMessageDialog(null,"Wrong Passoword");
+                JOptionPane.showMessageDialog(null,"Wrong Password");
                 System.exit(0);
             }
         }
