@@ -54,7 +54,7 @@ public class Add extends JFrame implements ActionListener  {
                 String password = t3.getText();
                 String username = t4.getText();
                 Class.forName("com.mysql.jdbc.Driver");
-                Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/passwordmanager", "root", "leaveme@10ne");
+                Connection c = DriverManager.getConnection("jdbc:mysql://localhost:<local host number(default:3306)>/<local database name>", "root", "<your local root password>");
                 if(c!=null)
                     System.out.println("Connection established");
                 else
