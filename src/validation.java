@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.event.*;
 public class validation implements ActionListener{
-    private static String password = "123";    
+    private static String password = "<your main password for the application>";    
     JFrame frame = new JFrame();
     JPasswordField pass = new JPasswordField(50);
     JButton check = new JButton("Login");
